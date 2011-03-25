@@ -109,7 +109,7 @@ public class PatientResource extends ServerResource {
 				
 				// Set the response's status and entity
 				setStatus(Status.SUCCESS_CREATED);
-				Representation rep = new StringRepresentation("Item created",
+				Representation rep = new StringRepresentation("Item created. ID is: " + itemId,
 						MediaType.TEXT_PLAIN);
 				// Indicates where is located the new resource.
 				rep.setLocationRef(getRequest().getResourceRef()

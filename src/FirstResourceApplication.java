@@ -23,9 +23,9 @@ public class FirstResourceApplication extends Application {
         Router router = new Router(getContext());
 
         // Defines a route for the resource "list of items"
-        router.attach("/items", PatientsResources.class);
+        router.attach("/patients", PatientsResources.class);
         // Defines a route for the resource "item"
-        router.attach("/items/{itemId}", PatientResource.class);
+        router.attach("/patients/{itemId}", PatientResource.class);
 
         return router;
     }

@@ -30,11 +30,11 @@ public class PatientsResources extends ServerResource {
 		Representation result = null;
 		Patient item = new Patient();
 		Form form = new Form(entity);
-		item.setName(form.getFirstValue(Patient.NAME));
-		item.setDescription(form.getFirstValue(Patient.DESCRIPTION));
-		item.setCardiacstate(form.getFirstValue(Patient.CARDIACSTATE));
-		item.setRespiratorystate(form.getFirstValue(Patient.RESPIRATORYSTATE));
-		item.setMentalstate(form.getFirstValue(Patient.MENTALSTATE));
+		item.setName(form.getFirstValue(Patient.NAME, true, "NULL"));
+		item.setDescription(form.getFirstValue(Patient.DESCRIPTION, true, "NULL"));
+		item.setCardiacstate(form.getFirstValue(Patient.CARDIACSTATE, true, "NULL"));
+		item.setRespiratorystate(form.getFirstValue(Patient.RESPIRATORYSTATE, true, "NULL"));
+		item.setMentalstate(form.getFirstValue(Patient.MENTALSTATE, true, "NULL"));
 		
 		String itemId = null;
 		DatabaseResource db = new DatabaseResource(
